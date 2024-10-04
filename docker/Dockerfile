@@ -1,5 +1,5 @@
 FROM openjdk:11-jre as builder
-WORKDIR application
+WORKDIR /application
 ARG ARTIFACT_NAME
 COPY ${ARTIFACT_NAME}.jar application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
@@ -14,7 +14,7 @@ RUN chmod +x dockerize
 # wget is not installed on adoptopenjdk:11-jre-hotspot
 FROM adoptopenjdk:11-jre-hotspot
 
-WORKDIR application
+WORKDIR /application
 
 # Dockerize
 COPY --from=builder application/dockerize ./

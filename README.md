@@ -236,9 +236,9 @@ Deploy the databases:
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
-helm install vets-db-mysql bitnami/mysql --namespace spring-petclinic --version 8.8.8 --set auth.database=service_instance_db
-helm install visits-db-mysql bitnami/mysql --namespace spring-petclinic  --version 8.8.8 --set auth.database=service_instance_db
-helm install customers-db-mysql bitnami/mysql --namespace spring-petclinic  --version 8.8.8 --set auth.database=service_instance_db
+helm install vets-db-mysql bitnami/mysql --namespace spring-petclinic --version 11.1.13 --set auth.database=service_instance_db
+helm install visits-db-mysql bitnami/mysql --namespace spring-petclinic  --version 11.1.13 --set auth.database=service_instance_db
+helm install customers-db-mysql bitnami/mysql --namespace spring-petclinic  --version 11.1.13 --set auth.database=service_instance_db
 ```
 
 ### Deploying the application
@@ -426,3 +426,14 @@ For pull requests, editor preferences are available in the [editor config](.edit
 
 [Configuration repository]: https://github.com/spring-petclinic/spring-petclinic-microservices-config
 [Spring Boot Actuator Production Ready Metrics]: https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-metrics.html
+
+# Corrected command
+kubectl create secret docker-registry spring-petclinic \
+    --docker-username="$USERNAME" \
+    --docker-password="$PASSWORD" \
+    --docker-email="luniyisiemmanuel@gmail.com" \
+    --dry-run=client -o yaml > ./k8s/init-namespace/02-regcreds.yaml
+
+# Exporting username and password
+export USERNAME="luniemma"
+export PASSWORD="African2022!"

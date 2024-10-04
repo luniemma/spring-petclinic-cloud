@@ -1,33 +1,32 @@
 <h2>Owner</h2>
-<form ng-submit="$ctrl.submitOwnerForm()" style="max-width: 25em;">
+<form ng-submit="$ctrl.submitOwnerForm()" class="owner-form">
     <div class="form-group">
-        <label>First name</label>
-        <input class="form-control" ng-model="$ctrl.owner.firstName" name="firstName" required/>
+        <label for="firstName">First name</label>
+        <input class="form-control" ng-model="$ctrl.owner.firstName" id="firstName" name="firstName" placeholder="First name" required/>
         <span ng-show="ownerForm.firstName.$error.required" class="help-block">First name is required.</span>
     </div>
 
     <div class="form-group">
-        <label>Last name</label>
-        <input class="form-control" ng-model="$ctrl.owner.lastName" name="lastName" required/>
+        <label for="lastName">Last name</label>
+        <input class="form-control" ng-model="$ctrl.owner.lastName" id="lastName" name="lastName" placeholder="Last name" required/>
         <span ng-show="ownerForm.lastName.$error.required" class="help-block">Last name is required.</span>
     </div>
 
-
     <div class="form-group">
-        <label>Address</label>
-        <input class="form-control" ng-model="$ctrl.owner.address" name="address" required/>
+        <label for="address">Address</label>
+        <input class="form-control" ng-model="$ctrl.owner.address" id="address" name="address" placeholder="Address" required/>
         <span ng-show="ownerForm.address.$error.required" class="help-block">Address is required.</span>
     </div>
 
     <div class="form-group">
-        <label>City</label>
-        <input class="form-control" ng-model="$ctrl.owner.city" name="city" required/>
+        <label for="city">City</label>
+        <input class="form-control" ng-model="$ctrl.owner.city" id="city" name="city" placeholder="City" required/>
         <span ng-show="ownerForm.city.$error.required" class="help-block">City is required.</span>
     </div>
     
     <div class="form-group">
-        <label>Telephone</label>
-        <input class="form-control" ng-model="$ctrl.owner.telephone" name="telephone" required/>
+        <label for="telephone">Telephone</label>
+        <input class="form-control" ng-model="$ctrl.owner.telephone" id="telephone" name="telephone" placeholder="Telephone" required/>
         <span ng-show="ownerForm.telephone.$error.required" class="help-block">Telephone is required.</span>
     </div>
     

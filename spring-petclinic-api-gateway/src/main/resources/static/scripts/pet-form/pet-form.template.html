@@ -9,25 +9,25 @@
     </div>
 
     <div class="form-group">
-        <label class="col-sm-2 control-label">Name </label>
+        <label class="col-sm-2 control-label" for="name">Name</label>
         <div class="col-sm-6">
-            <input class="form-control col-sm-4" ng-model="$ctrl.pet.name" name="name" required type="text"/>
+            <input class="form-control col-sm-4" ng-model="$ctrl.pet.name" id="name" name="name" required type="text" placeholder="Enter pet name"/>
             <span ng-show="petForm.name.$error.required" class="help-inline">Name is required.</span>
         </div>
     </div>
 
     <div class="form-group">
-        <label class="col-sm-2 control-label">Birth date</label>
+        <label class="col-sm-2 control-label" for="birthDate">Birth date</label>
         <div class="col-sm-6">
-            <input class="form-control" ng-model="$ctrl.pet.birthDate" required type="date"/>
-            <span ng-show="petForm.name.$error.required" class="help-inline"> birth date is required.</span>
+            <input class="form-control" ng-model="$ctrl.pet.birthDate" id="birthDate" name="birthDate" required type="date" placeholder="Enter birth date"/>
+            <span ng-show="petForm.birthDate.$error.required" class="help-inline">Birth date is required.</span>
         </div>
     </div>
 
     <div class="form-group">
-        <label class="col-sm-2 control-label">Type</label>
+        <label class="col-sm-2 control-label" for="petType">Type</label>
         <div class="col-sm-6">
-            <select class="form-control" ng-model="$ctrl.petTypeId">
+            <select class="form-control" ng-model="$ctrl.petTypeId" id="petType">
                 <option ng-repeat="t in $ctrl.types track by t.id" value="{{t.id}}">{{t.name}}</option>
             </select>
         </div>

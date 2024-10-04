@@ -23,7 +23,7 @@ then
     echo "Need export docker-username variable. Example: export USERNAME=you-docker-username"
     exit 0
   fi
-  kubectl create secret docker-registry regcred -n spring-petclinic --docker-server="$REPOSITORY_PREFIX" --docker-username="$USERNAME" --docker-password="$PASSWORD" --docker-email="example@example.com" --dry-run=client -o yaml > ./k8s/init-namespace/02-regcreds.yaml
+  kubectl create secret docker-registry regcred -n spring-petclinic --docker-server="$REPOSITORY_PREFIX" --docker-username="$USERNAME" --docker-password="$PASSWORD" --docker-email="luniyisiemmanuel@gmail.com" --dry-run=client -o yaml > ./k8s/init-namespace/02-regcreds.yaml
 else
   echo "Use $REPOSITORY_PREFIX as docker-username"
   echo "Use https://index.docker.io/v1/ as docker-server"

@@ -22,6 +22,13 @@ spec:
       - name: wavefront-proxy
         image: wavefronthq/proxy:latest
         imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "256Mi"  # Adjust as necessary
+            cpu: "250m"      # Adjust as necessary
+          limits:
+            memory: "512Mi"  # Adjust as necessary
+            cpu: "500m"      # Adjust as necessary
         env:
         - name: WAVEFRONT_URL
           valueFrom:

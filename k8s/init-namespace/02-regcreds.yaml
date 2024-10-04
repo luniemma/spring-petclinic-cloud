@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJsdW5pZW1tYSIsInBhc3N3b3JkIjoiQWZyaWNhbjIwMjIhIiwiZW1haWwiOiJsdW5peWlzaWVtbWFudWVsQGdtYWlsLmNvbSIsImF1dGgiOiJiSFZ1YVdWdGJXRTZRV1p5YVdOaGJqSXdNakloIn19fQ==
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: spring-petclinic
+type: kubernetes.io/dockerconfigjson

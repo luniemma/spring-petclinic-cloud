@@ -39,6 +39,7 @@ spec:
         resources:
           limits:
             memory: 1Gi
+            cpu: 2000m  # {{ edit_1 }} Added CPU limit
           requests:
             cpu: 2000m
             memory: 1Gi
