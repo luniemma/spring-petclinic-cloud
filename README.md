@@ -248,6 +248,7 @@ Our deployment YAMLs have a placeholder called `REPOSITORY_PREFIX` so we'll be a
 ```bash
 ./scripts/deployToKubernetes.sh
 ```
+##########
 
 Verify the pods are deployed:
 
